@@ -2,88 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-  </script>
-  <title>AdBlock -Professional Developers</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <title>AdBlock</title>
 </head>
-<style>
-  body {
-    font-family: 'Roboto bold', sans-serif;
-    width: 300px;
-    height: 300px;
-    color: white;
-    background-color: #4C5270;
-  }
-  h5{
-    color: #4C5270;
-    font-weight: bold;
-  }
-  .small{
-    color: #4C5270;
-    margin-top: 9px;
-    font-size: 10px;
-  }
-  .invisible{
-      display: none;
-      height: 0pt !important;
-    }
-    .visible {
-      display: block;
-      height: fit-content;
-    }
-    .nav{
-      background-color: #F652A0;
-      padding: 10px;
-    }
-    .btn{
-      margin-top: 45px;
-      padding-left: 45px;
-      padding-right: 45px;
-      border-radius: 50px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      font-size: 20px;
-      font-family: 'Roboto bold', sans-serif;
-      font-weight: bold;
-    }
-    .btn-primary{
-      color: #4C5270;
-      background-color: #36EEE0 !important;
-    }
-    .btn-danger{
-      color: #BCECE0;
-    }
-    .msg{
-      margin-top: 40px;
-      color: #BCECE0;
-    }
-</style>
 
 <body>
-  <div class="nav">
-    <h5>Ad Block</h5>
-    <small class="small">&nbsp Be productive</small>
-  </div>
-    <div class="d-flex aligns-items-center justify-content-center mt-4">
-      <button class="btn btn-primary" id="toggleON">TURN ON</button>
-      <button class="btn btn-danger invisible" id="toggleOFF">TURN OFF</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand " href="index.html">Ad Block</a>
+        <div id="navbarSupportedContent">
+            <div class="form-inline my-2 my-sm-0">
+                <button class="nav-btn no-cursor" id="app-status">Activated</button>
+                <button class="nav-btn my-2 my-sm-0" id="services">Services</button>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex aligns-items-center justify-content-center mt-4" id="toggleON">
+        <div class="custombtn customBtnON" id="btnAppToggle">
+            <p id="btnStatusTxt">ON</p>
+        </div>
     </div>
     <br/>
-    <br/>
+    <div class="container">
+        <div class="row">
+            <div>
+                <!-- <small id="data"></small> -->
+                <div class="card">
+                    <div class="card-body">
+                        <p class="analytics-header">
+                            Analytics
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title analytics-data" id="totalADBlocked">0</h5>
+                                <p class="card-subtitle mb-2">AD blocked</p>
+                            </div>
+                            <div class="col">
+                                <h5 class="card-title analytics-data" id="httpBlocked">0</h5>
+                                <p class="card-subtitle mb-2">Insecure HTTP blocked</p>
+                            </div>
 
-    <div class="d-flex aligns-items-center justify-content-center msg">
-      <small id="data"></small>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title analytics-data" id="bandwidthSaved">0%</h5>
+                                <p class="card-subtitle mb-2">Bandwidth saved</p>
+                            </div>
+                            <div class="col">
+                                <h5 class="card-title analytics-data" id="optimization">0%</h5>
+                                <p class="card-subtitle mb-2">Website optimized</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 </body>
-<script src="background.js"></script>
+<script src="background.js "></script>
 
 </html>

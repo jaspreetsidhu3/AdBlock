@@ -13,7 +13,8 @@
 
     "background": {
         "scripts": [
-            "background.js"
+            "background.js",
+            "services/services.js"
         ],
         "persistent": true
     },
@@ -27,6 +28,6 @@
         "default_icon": "src/logo_64.png",
         "default_popup": "index.html"
     },
-    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js; object-src 'self'",
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js;  object-src 'self'",
     "permissions": ["webRequest", "webRequestBlocking", "<all_urls>", "tabs", "storage", "activeTab"]
 }

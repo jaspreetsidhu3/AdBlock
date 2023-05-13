@@ -1,0 +1,176 @@
+body {
+    font-family: 'Roboto bold', sans-serif;
+    margin: 0;
+    height: 550px;
+    padding: 0;
+    width: 380px;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.small {
+    color: #4C5270;
+    margin-top: 9px;
+    font-size: 10px;
+}
+
+.invisible {
+    transition-duration: 0.0s;
+    display: none;
+    height: 0pt !important;
+}
+
+.visible {
+    transition-duration: 0.0s;
+    display: block;
+    height: fit-content;
+}
+
+.analytics-header {
+    font-size: medium;
+    margin-left: -10px;
+}
+
+.msg {
+    margin-top: 40px;
+    color: #BCECE0;
+}
+
+.card {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.nav-btn {
+    border-color: #0a0a23;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.no-cursor {
+    cursor: default !important;
+}
+
+.analytics-data {
+    font-weight: bold;
+}
+
+.col {
+    padding: 10px;
+    border: 0.3px solid #d8dcdf;
+}
+
+
+/* The Activated Button */
+
+ :root {
+    --shw-color: rgba(116, 238, 21, 0.75);
+    --shw-sizes: 0px 0px 20px 0px;
+    --shw-hov-sizes: 0px 0px 50px 0px;
+    --border-color: rgba(116, 238, 21, 0.76);
+    --shw-color-turnOFF: rgba(238, 35, 21, 0.75);
+    --border-color-turnOFF: rgba(238, 35, 21, 0.76);
+    --w: 160px;
+    --h: 160px;
+    --w-hov: 180px;
+    --h-hov: 180px;
+    --txt-size: 23px;
+    --txt-hov-size: 25px;
+    --txt-shw-color: black;
+    --txt-shw-size: 0 0 10px;
+}
+
+.custombtn {
+    transition-duration: 0.5s;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    color: white;
+    background: alpha;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: var(--txt-shw-size) var(--txt-shw-color);
+    width: var(--w);
+    height: var(--h);
+    font-size: var(--txt-size);
+    border-radius: 100%;
+}
+
+.customBtnON {
+    -webkit-box-shadow: var(--shw-sizes) var(--shw-color);
+    -moz-box-shadow: var(--shw-sizes) var(--shw-color);
+    box-shadow: var(--shw-sizes) var(--shw-color);
+    border: 2px solid var(--border-color);
+}
+
+.customBtnON:hover {
+    cursor: pointer;
+    -webkit-box-shadow: var(--shw-hov-sizes) var(--shw-color);
+    -moz-box-shadow: var(--shw-hov-sizes) var(--shw-color);
+    box-shadow: var(--shw-hov-sizes) var(--shw-color);
+    font-size: var(--txt-hov-size);
+}
+
+.customBtnON:active {
+    -webkit-box-shadow: var(--shw-sizes) var(--shw-color);
+    -moz-box-shadow: var(--shw-sizes) var(--shw-color);
+    box-shadow: var(--shw-sizes) var(--shw-color);
+    width: var(--w);
+    height: var(--h);
+    font-size: var(--txt-size);
+}
+
+
+/*button OFF css */
+
+.customBtnOFF {
+    -webkit-box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    -moz-box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    border: 2px solid var(--border-color-turnOFF);
+}
+
+.customBtnOFF:hover {
+    cursor: pointer;
+    -webkit-box-shadow: var(--shw-hov-sizes) var(--shw-color-turnOFF);
+    -moz-box-shadow: var(--shw-hov-sizes) var(--shw-color-turnOFF);
+    box-shadow: var(--shw-hov-sizes) var(--shw-color-turnOFF);
+    font-size: var(--txt-hov-size);
+}
+
+.customBtnOFF:active {
+    -webkit-box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    -moz-box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    box-shadow: var(--shw-sizes) var(--shw-color-turnOFF);
+    width: var(--w);
+    height: var(--h);
+    font-size: var(--txt-size);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}

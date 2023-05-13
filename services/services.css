@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto bold', sans-serif;
+    margin: 0;
+    height: 590px;
+    padding: 0;
+    width: 380px;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.header {
+    margin-left: 2px;
+    color: aliceblue;
+    margin-top: 14px;
+    font-weight: 600;
+}
+
+.card {
+    margin: 10px;
+    width: 80%;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+.nav-btn {
+    border-color: #0a0a23;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.card-subtitle {
+    margin-top: 0.28rem;
+}
+
+.card {
+    border-radius: 50rem;
+}
+
+.h5,
+h5 {
+    font-size: 1.00rem;
+}
+
+.card-title {
+    margin-top: 0.48rem;
+}
+
+.sub-header {
+    color: white;
+    margin-left: 3px;
+}
+
+.faint-color {
+    color: aliceblue;
+    border: none;
+    text-decoration: none;
+}
