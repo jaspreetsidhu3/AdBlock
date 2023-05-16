@@ -1,33 +1,32 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "AdBlock",
-    "description": "Be  Productive",
-    "version": "1.0.1",
-    "icon": {
-        "128": "src/logo_128.png",
-        "64": "src/logo_64.png",
-        "48": "src/logo_48.png",
-        "20": "src/logo_20.png",
-        "16": "src/logo_16.png"
+    "description": "Block advertisements, insecure webpages, and provides other services",
+    "version": "1.0.5",
+    "icons": {
+        "100": "src/logo_128.png"
     },
-
-    "background": {
-        "scripts": [
-            "background.js",
-            "services/services.js"
-        ],
-        "persistent": true
-    },
-
     "content_scripts": [{
         "matches": ["*://*.youtube.com/*"],
-        "js": ["script.js"]
+        "js": ["ytscript.js"]
     }],
-
-    "browser_action": {
+    "background": {
+        "service_worker": "workerservices.js",
+        "type": "module"
+    },
+    "action": {
         "default_icon": "src/logo_64.png",
         "default_popup": "index.html"
     },
-    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js;  object-src 'self'",
-    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>", "tabs", "storage", "activeTab"]
+    "permissions": ["declarativeNetRequest", "declarativeNetRequestFeedback", "tabs", "storage", "activeTab", "webNavigation"],
+    "declarative_net_request": {
+        "rule_resources": [{
+            "id": "blockAdvertisement",
+            "enabled": true,
+            "path": "blocked.json"
+        }]
+    },
+    "host_permissions": [
+        "http://*/*", "https://*/*"
+    ]
 }
